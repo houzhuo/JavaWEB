@@ -56,7 +56,7 @@ public class CheckServlet extends HttpServlet {
 			String forward = null;
 			if (uname == null || passwd == null) {
 				request.setAttribute("msg", "用户名或密码为空");
-				rd = request.getRequestDispatcher("/14/error.jsp");
+				rd = request.getRequestDispatcher("/servlet2/error.jsp");
 				rd.forward(request, response);
 			} else {
 				User user = new User();
@@ -65,9 +65,9 @@ public class CheckServlet extends HttpServlet {
 				boolean bool = cku.check(user);
 
 				if (bool) {
-					forward = "/15/success.jsp";
+					forward = "/servlet2/success.jsp";
 				} else {
-					forward = "/15/error.jsp";
+					forward = "/servlet2/error.jsp";
 				}
 
 				rd = request.getRequestDispatcher(forward);

@@ -47,7 +47,7 @@ body {
 用户名：<%= request.getParameter("uname") %><br/>
 密码：<%= request.getParameter("upwd") %><br/>
 
-<a href="<%=request.getContextPath() %>/15/login.jsp">返回登陆页面</a>
+<a href="<%=request.getContextPath() %>/servlet2/login.jsp">返回登陆页面</a>
 
 </div>
 
