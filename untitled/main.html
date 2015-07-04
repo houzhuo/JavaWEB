@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="amazeui.min.css">
+    <link rel="stylesheet" href="amazeui.switch.css">
+</head>
+<body>
+<button type="button" id="loginBtn" class="am-btn am-btn-primary">主色按钮</button>
+<input type="checkbox" data-am-switch id="switchBtn">
+
+
+
+<script src="jquery.min.js"></script>
+<script src="amazeui.min.js"></script>
+<script src="amazeui.switch.min.js"></script>
+<script>
+
+
+    $('[name="my-checkbox"]').bootstrapSwitch();
+    $("#switchBtn").on('switchChange.bootstrapSwitch', function(event, state) {
+        alert(state);
+    })
+
+</script>
+</body>
+</html>
