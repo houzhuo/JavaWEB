@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="show"></div>
+	<script src="jquery.min.js"></script>
+	<script>
+		
+		$(function () {
+			function getNum () {
+				$.ajax({
+					url: 'srv.php',
+					dataType:'json',
+					
+					   data: {
+					  	 q: "1"
+					   },
+					success: function (data) {
+						
+						// for(var o in data){
+						// 	console.log(data[o]['name']);
+						// }
+						 console.log(data.name);
+						 //$("#show").html(data.status);
+						
+						getNum();
+					},error:function (e) {
+						alert(e);
+					}
+					
+				});
+			};
+			getNum();
+		//setInterval(getNum, 100);
+		});
+	</script>
+</body>
+</html>
